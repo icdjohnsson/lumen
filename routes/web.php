@@ -11,6 +11,7 @@
 |
 */
 
+// Main application
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return response()->json(['name' => env('APP_NAME', 'icdjohnsson-lumen'), 'verison' => env('VERSION', 'x')], 200);
 });
